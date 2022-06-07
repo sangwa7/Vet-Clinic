@@ -46,3 +46,19 @@ ALTER TABLE animals ADD COLUMN owner_id INT;
 ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
 
 COMMIT;
+
+
+-- Add an animal_id  column to your visits table
+ALTER TABLE visits ADD COLUMN animal_id  INT;
+
+-- Add an vet_id  column to your visits table
+ALTER TABLE visits ADD COLUMN vet_id  INT;
+
+
+-- Create indexed to reduce time for execution and increase database performance. 
+
+CREATE INDEX animal_id_asc ON visits (animal_id ASC);
+
+CREATE INDEX vet_id_asc ON visits (vet_id ASC); 
+
+CREATE INDEX email_desc ON owners (email DESC); 

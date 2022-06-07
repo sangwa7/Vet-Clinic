@@ -86,3 +86,23 @@ SELECT full_name, COUNT(owner_id) AS Total_animals FROM owners
 JOIN animals ON  owners.id = animals.owner_id
 GROUP BY full_name
 ORDER BY COUNT(name) DESC;
+
+
+--To count animal_id total in visits table. 
+SELECT COUNT(*) FROM visits where animal_id = 4;
+
+-- To select vet_id equals to from visits table 
+SELECT * FROM visits where vet_id = 2;
+
+-- To select email from owners table 
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+
+-- Querries to analyse perfomance of the table on a certain operation done.  
+
+EXPLAIN ANALYSE SELECT COUNT(*) FROM visits where animal_id = 4;
+
+EXPLAIN ANALYSE SELECT * FROM visits where vet_id = 2;
+
+EXPLAIN ANALYSE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
