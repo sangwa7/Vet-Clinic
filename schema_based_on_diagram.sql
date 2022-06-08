@@ -22,3 +22,31 @@ CREATE TABLE treatments (
 	   type VARCHAR(255), 
 	   name VARCHAR(255)
 );
+
+/* create invoices table */
+CREATE TABLE invoices (
+   id INT PRIMARY KEY NOT NULL,
+   generated_at TIMESTAMP, 
+   payed_at TIMESTAMP, 
+   medical_histories_id INT, 
+   CONSTRAINT fk_medical_history
+	FOREIGN KEY (medical_histories_id)
+	REFERENCES medical_histories(id)
+);
+
+/* create invoice_items table */
+CREATE TABLE invoice_items (
+  id INT PRIMARY KEY NOT NULL,
+  unit_price NUMERIC, 
+  quantity INT, 
+  total_price NUMERIC, 
+  invoice_id INT, 
+  CONSTRAINT fk_invoice
+  FOREIGN KEY (invoice_id)
+  REFERENCEs invoices(id),
+    treatment_id INT, 
+	CONSTRAINT fk_treatment
+	FOREIGN KEY (treatment_id)
+	REFERENCES treatments(id)
+);
+
