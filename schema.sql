@@ -55,7 +55,7 @@ ALTER TABLE visits ADD COLUMN animal_id  INT;
 ALTER TABLE visits ADD COLUMN vet_id  INT;
 
 
-/* Create indexed to reduce time for execution and increase database performance */ 
+/* Create indexed to reduce time for execution and increase database performance. */
 
 CREATE INDEX animal_id_asc ON visits (animal_id ASC);
 

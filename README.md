@@ -17,7 +17,15 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [Didier Sangwa](https://github.com/sangwa7)
 - Twitter: [@sangwa_7](https://twitter.com/sangwa_7)
-- LinkedIn: [Didier Sangwa](https://www.linkedin.com/in/didier-sangwa-463054227)
+- LinkedIn: [Didier Sangwa](https://www.linkedin.com/in/didier-sangwa)
+
+## Authors
+
+👤 **Nicole Ciraganer**
+
+- GitHub: [@ciraganenicole](https://github.com/ciraganenicole)
+- Twitter: [@CiraganeN](https://twitter.com/CiraganeN)
+- LinkedIn: [@CiraganeNicole](https://www.linkedin.com/in/nicole-ciragane-19a3071bb/)
 
 ## 🤝 Contributing
 
