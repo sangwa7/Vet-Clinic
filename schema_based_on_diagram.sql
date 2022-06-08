@@ -50,3 +50,19 @@ CREATE TABLE invoice_items (
 	REFERENCES treatments(id)
 );
 
+/* creating a many to many relationship between treatment and medical_history */
+CREATE TABLE medical_treatment(
+    medical_id INT,
+    treatment_id INT,
+    CONSTRAINT fk_medical_history FOREIGN KEY(medical_id)
+    REFERENCES medical_histories(id),
+    CONSTRAINT fk_medical_treatment FOREIGN KEY(treatment_id)
+    REFERENCES treatments(id)
+);
+
+
+/* Optimized Execution analysis by creating Indexes */
+CREATE INDEX treatment_id_asc ON invoice_items (treatment_id ASC);
+CREATE INDEX medical_histories_id_asc ON invoices (medical_histories_id ASC);
+CREATE INDEX invoices_asc ON invoice_items (invoice_id ASC);
+CREATE INDEX patients_asc ON medical_histories (patient_id ASC);
